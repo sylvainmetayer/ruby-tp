@@ -1,0 +1,13 @@
+<%= form_for @user do |f| %>
+
+  <%=f.text_field :firstname %>
+  <%= @user.errors[:firstname] %>
+</br>
+  <%=f.text_field :lastname %>
+  <%= @user.errors[:lastname] %>
+</br>
+  <%=f.number_field :age %>
+  <%= @user.errors[:age] %>
+</br>
+  <%=f.submit %>
+<% end %>
