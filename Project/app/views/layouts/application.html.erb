@@ -10,5 +10,12 @@
 
 <%= yield %>
 
+<hr/>
+
+<% if user_signed_in? %>
+  <%= current_user %>
+<% else %>
+  No user
+<% end %>
 </body>
 </html>
