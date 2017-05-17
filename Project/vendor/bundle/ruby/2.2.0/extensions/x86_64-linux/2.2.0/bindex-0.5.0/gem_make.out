@@ -1,0 +1,11 @@
+/usr/local/rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20170412-2476-7bf208.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20170412-2476-ceprdu/bindex

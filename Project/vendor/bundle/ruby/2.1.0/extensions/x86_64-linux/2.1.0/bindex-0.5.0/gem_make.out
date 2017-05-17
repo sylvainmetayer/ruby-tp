@@ -1,0 +1,12 @@
+/usr/bin/ruby2.1 extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20170412-27903-1rjil9q/bindex
+installing default cruby libraries
