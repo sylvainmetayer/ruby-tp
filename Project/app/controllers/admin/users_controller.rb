@@ -25,12 +25,13 @@ before_action :authenticate_user!
   end
 
   def get_user_params
-    return :firstname, :lastname, :age, :email, :password
+    return :firstname, :lastname, :age, :email, :password, :avatar
   end
 
   def update
     @user = User.find(params[:id])
     @user.update_attributes params[:user].permit(get_user_params)
+    @user.avatar = params[:avatar]
     if @user.save
       redirect_to [:admin, @user]
     else
@@ -41,6 +42,7 @@ before_action :authenticate_user!
   def create
     @user = User.new
     @user.update_attributes params[:user].permit(get_user_params)
+    @user.avatar = params[:avatar] 
     if @user.save
       redirect_to [:admin, @user]
     else

@@ -20,5 +20,8 @@ PWD
 <%=f.password_field :password %>
 <%= user.errors[:password] %>
 </br>
+Avatar
+<%= f.file_field :avatar %>
+<br/>
   <%=f.submit %>
 <% end %>
